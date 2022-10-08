@@ -17,7 +17,7 @@ function Header() {
     return ()=>{window.removeEventListener('scroll',handleScroll)}
   },[])
   return (
-    <header>
+    <header className={`${isScrolled &&'bg-red-500'}`}>
       <div className="flex justify-between items-center space-x-2 md:space-x-10">
         <img
           src="./logo1.png"
