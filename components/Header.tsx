@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {SearchIcon} from '@heroicons/react/outline'
 import {BellIcon} from '@heroicons/react/outline'
-import { Link } from "react-router-dom";
+
 import Image from 'next/image'
 
 
