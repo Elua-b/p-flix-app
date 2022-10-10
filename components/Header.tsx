@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import {SearchIcon} from '@heroicons/react/outline'
 import {BellIcon} from '@heroicons/react/outline'
 import { Link } from "react-router-dom";
+import Image from 'next/image'
+
 
 function Header() {
   const [isScrolled,setIsScrolled]=useState(false)
@@ -18,9 +20,9 @@ function Header() {
   },[])
   return (
     <header className={`${isScrolled &&'bg-red-500'}`}>
-      <div className="flex items-center justify-between p-3 space-x-2 md:space-x-10">
-        <img
-          src="./logo1.png"
+      <div className="flex items-center justify-between p-1 pr-4 space-x-2 md:space-x-10">
+        <Image
+          src="./logo3.png"
           width={100}
           height={100}
           className="cursor-pointer object-contain"
