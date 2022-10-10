@@ -21,7 +21,7 @@ function Header() {
   return (
     <header className={`${isScrolled &&'bg-red-500'}`}>
       <div className="flex items-center justify-between p-1 pr-4 space-x-2 md:space-x-10">
-        <Image
+        <img
           src="./logo3.png"
           width={100}
           height={100}
