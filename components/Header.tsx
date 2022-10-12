@@ -23,8 +23,7 @@ function Header() {
       <div className="flex items-center justify-between p-1 pr-4 space-x-2 md:space-x-10">
         <img
           src="./logo3.png"
-          width={100}
-          height={100}
+          style={{width: 100, height: 100}}
           className="cursor-pointer object-contain"
           alt=""
         />
