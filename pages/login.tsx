@@ -15,7 +15,14 @@ function Login() {
 
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async(data) => {
+    if(login){
+      //await signIn(email,password)
+
+    }else{
+      //await signUp(email,password)
+    }
+  }
   return (
     <div className="relative flex h-screen w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent ">
       <Head>
@@ -64,7 +71,7 @@ function Login() {
             />
              {errors.email && (
               <p className="p-1 text-[13px] font-light text-orange-500">
-              Your password must contain between 4 and 60 characters.
+              Your password must contain between 4 and 6 characters.
               </p>
             )}
           </label>
@@ -72,12 +79,13 @@ function Login() {
         <button
           type="submit"
           className="w-full rounded bg-[#e50914] py-3 font-semibold"
+          onClick={()=>setLogin(true)}
         >
           Sign In
         </button>
         <div className="text-[gray]">
           New to P-flix?{" "}
-          <button type="submit" className="text-white hover:underline">
+          <button type="submit" className="text-white hover:underline" onClick={()=>setLogin(false)}>
             Sign up now
           </button>
         </div>
