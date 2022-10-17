@@ -36,7 +36,7 @@ function Login() {
         
         alt=""
         className=" -z-10 !hidden opacity-60 sm:!inline"
-        objectFit="cover"
+        
       />
       <img
         src="logo3.png"
