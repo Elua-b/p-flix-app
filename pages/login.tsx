@@ -33,7 +33,7 @@ function Login() {
       </Head>
       <img
         src="./auth.jpg"
-        layout="fill"
+        
         alt=""
         className=" -z-10 !hidden opacity-60 sm:!inline"
         objectFit="cover"
