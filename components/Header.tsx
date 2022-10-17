@@ -3,9 +3,10 @@ import {SearchIcon} from '@heroicons/react/outline'
 import {BellIcon} from '@heroicons/react/outline'
 
 import Image from 'next/image'
-
+import useAuth from "../hooks/useAuth";
 
 function Header() {
+  const {logout}=useAuth()
   const [isScrolled,setIsScrolled]=useState(false)
   useEffect(()=>{
     const handleScroll=()=>{
@@ -36,13 +37,13 @@ function Header() {
           </li>
           <li className="headerLink">My List</li>
         </ul>
-        <div className="flex items-center space-x-4 text-sm font-light">
+        <div className="flex items-center space-x-4 text-sm font-light pr-6">
           <SearchIcon className="sm hidden h-6 w-6 sm:inline "/>
           <p className="hidden lg:inline">Kids</p>
           <BellIcon className="h-6 w-6"/>
-          {/* <Link  href="/account">
-            <img src="" alt="" />
-          </Link> */}
+           {/* <Link  href="/account"> */}
+            <p className="hidden lg:inline cursor-pointer" onClick={logout}>logout</p>
+          {/* </Link> */}
           
         </div>
       </div>

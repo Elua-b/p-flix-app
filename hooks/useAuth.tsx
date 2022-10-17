@@ -23,10 +23,11 @@ const AuthContext = createContext<IAuth>({
   signIn: async () => {},
   logout: async () => {},
   error: null,
+  
   loading: false,
 })
 interface AuthProviderProps{
-    children:ReactNode  
+    children:React.ReactNode  
 
 }
 export const  AuthProvider=({children}:AuthProviderProps)=> {
